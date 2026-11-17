@@ -1,0 +1,20 @@
+SENSITIVITY REPORT
+Student: Lancion | ID: TUPM-26-1845
+SEED_DIGIT = 5 | ID_SUM = 26
+Features: ['F011', 'F254', 'F383', 'F469', 'F472']
+Bootstrap repetitions: 250 (200 + 10 x 5), stratified by outcome, seed = 5
+Strategies: available-case analysis vs. median imputation (full-dataset medians)
+
+Largest change in mean difference: F383 (+0.089962)
+Features with changed difference sign: None
+Features with changed ranking: None
+Features whose 95% CI excludes zero (available / imputed):
+  available: []
+  imputed  : ['F383']
+Reproducibility (same seed, identical results): True
+
+Interpretation:
+Median imputation pulls filled values toward each group's center, so mean differences and interval
+widths can shift versus available-case analysis. Where the sign, CI-vs-zero conclusion and ranking
+agree across strategies, the Fail-vs-Pass difference is robust to the preparation method; features
+whose conclusions change should be treated as sensitive to missing-data handling.
